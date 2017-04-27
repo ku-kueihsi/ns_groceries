@@ -1,1 +1,5 @@
 node_modules/*
+.vscode/*
+platforms/*
+app/**/*.js
+!.vscode/launch.json
