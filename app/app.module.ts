@@ -1,11 +1,15 @@
 import { NgModule } from "@angular/core";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptModule } from "nativescript-angular/platform";
 
 import { AppComponent } from "./app.component";
 
 @NgModule({
-  imports: [NativeScriptModule],
+  bootstrap: [AppComponent],
   declarations: [AppComponent],
-  bootstrap: [AppComponent]
+  imports: [
+    NativeScriptModule,
+    NativeScriptFormsModule,
+  ],
 })
 export class AppModule {}

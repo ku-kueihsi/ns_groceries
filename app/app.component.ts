@@ -6,7 +6,14 @@ import { Component } from "@angular/core";
   templateUrl: "templates/app.html",
 })
 export class AppComponent {
-  private submit() {
-    console.log("hello");
+  email = "nativescriptrocks@telerik.com";
+  isLoggingIn = true;
+
+  submit() {
+    alert("You’re using: " + this.email);
+  }
+
+  toggleDisplay() {
+    this.isLoggingIn = !this.isLoggingIn;
   }
 }
