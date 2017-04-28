@@ -2,6 +2,11 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "my-app",
-  template: "<Label text='hello world'></Label>"
+  styleUrls: ["pages/login/login-common.css", "pages/login/login.css"],
+  templateUrl: "templates/app.html",
 })
-export class AppComponent {}
+export class AppComponent {
+  private submit() {
+    console.log("hello");
+  }
+}
