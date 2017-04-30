@@ -1,8 +1,21 @@
-import { Component } from "@angular/core";
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+
+interface IGroceryItem {
+  name: string;
+}
 
 @Component({
   selector: "list",
   templateUrl: "pages/list/list.html",
-  styleUrls: ["pages/list/list-common.css", "pages/list/list.css"],
+  styleUrls: ["pages/list/list-common.css", "pages/list/list.css"]
 })
-export class ListComponent { }
+
+export class ListComponent implements OnInit {
+  groceryList: IGroceryItem[] = [];
+
+  ngOnInit() {
+    this.groceryList.push({ name: "Apples" });
+    this.groceryList.push({ name: "Bananas" });
+    this.groceryList.push({ name: "Oranges" });
+  }
+}
